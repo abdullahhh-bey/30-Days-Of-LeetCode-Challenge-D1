@@ -39,7 +39,7 @@ public class Solution {
         //     }
         // }
 
-        HashSet<int> seen = new HashSet<int>();
+        List<int> seen = new List<int>();
 
         // Loop through the array
         foreach (int num in nums) {
