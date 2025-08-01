@@ -2,40 +2,23 @@
 public class Solution {
     public int[] TwoSum(int[] nums, int target) {
 
-        // List<int> num = new List<int>();
 
-        // foreach( int val in nums )
-        // {
-        //     int result = target - val;
+        List<int> num = new List<int>();
 
-        //     if(num.Contains(result))
-        //     {
-        //         int j = Array.IndexOf(nums, val);
-        //         int i = num.IndexOf(result);
-        //         return new int[] {j , i} ;
-        //     } 
-
-        //     num.Add(val);
-        // }
-
-        // return new int[] {};
-
-        List<int> seen = new List<int>();
-
-        for (int i = 0; i < nums.Length; i++) {
-            int complement = target - nums[i];
-
-            if (seen.Contains(complement)) {
-                // Get index of the complement in the original array
-                int j = Array.IndexOf(nums, complement);
-                return new int[] { j, i };
+        for(int i = 0; i < nums.Length ; i++)
+        {
+            
+            int result = target - nums[i];
+            if(num.Contains(result))
+            {
+                int  j = num.IndexOf(result);
+                return new int[] {i , j};
+            } else{
+                num.Add(nums[i]);
             }
-
-            seen.Add(nums[i]); // Add current number to seen list
         }
-
-        return new int[] { }; // No pair found
-
         
+        //Rtturn if the pair is not found
+        return new int[] {};
     }
 }
