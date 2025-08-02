@@ -6,6 +6,9 @@ public class Solution {
         int k = 0;
         int size = word1.Length + word2.Length;
 
+
+        //Doing this with List can be a good option
+        
             for(int i = 0; i < size ; i++)
             {
                 if(turn == false && k != word1.Length)
