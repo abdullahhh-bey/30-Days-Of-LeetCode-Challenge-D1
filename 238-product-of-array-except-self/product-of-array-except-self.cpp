@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<int> productExceptSelf(vector<int>& nums) {
 
-        //I used c++ just to practice
+        //I used c++ just because it was very time efficient ( run the program in 0ms )
         vector<int> result(nums.size());
 
         //Using common approach - first find prefix & add it to result array and then find the suffix
