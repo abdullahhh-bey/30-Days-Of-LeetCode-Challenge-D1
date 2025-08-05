@@ -16,6 +16,7 @@ public:
         ListNode* newNode = new ListNode(0);
         ListNode* Head = newNode;
 
+        //If any one is null , break the loop
         while(list1 != NULL && list2 != NULL)
         {
             if(list1->val < list2->val)
@@ -26,9 +27,14 @@ public:
                 Head->next = list2;
                 list2 = list2->next;
             }
+
+            //move the head everytime the loop runs to reach the next node
             Head = Head->next;
         }
 
+    
+        //The list that becomes null, would help the tail
+        //to conntect to the other list 
         if(list1 == NULL)
         {
             Head->next = list2;
@@ -36,6 +42,7 @@ public:
             Head->next = list1;
         }
 
+        //Return the Head
         return newNode->next;        
 
     }
