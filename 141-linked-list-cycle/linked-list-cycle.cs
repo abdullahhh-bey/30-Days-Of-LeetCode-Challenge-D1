@@ -26,10 +26,7 @@ public class Solution {
             return false;
         } 
 
-        if(head.next == null)
-        {
-            return false;
-        }
+
 
         bool foundCycle = false;
         ListNode current = head;
@@ -38,7 +35,7 @@ public class Solution {
 
         while(foundCycle == false)
         {
-            if(current.next == null){
+            if(current.next == null || current == null){
                 break;
             } else if(address.Contains(current.next))
             {
