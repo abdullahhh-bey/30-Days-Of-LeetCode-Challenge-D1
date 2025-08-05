@@ -21,21 +21,24 @@ public class Solution {
         //List to store the Addresses
         List<ListNode> address = new List<ListNode>();
 
+        //Checks for validation
         if(head == null)
         {
             return false;
         } 
 
-
-
+        //For Strarting while loop
         bool foundCycle = false;
+        //POinter that points to the head ad then used for traversal
         ListNode current = head;
 
+        //Adding the address of the very first node ( head )
         address.Add(head);
 
+        //Main Logic
         while(foundCycle == false)
         {
-            if(current.next == null || current == null){
+            if(current.next == null ){
                 break;
             } else if(address.Contains(current.next))
             {
@@ -46,6 +49,7 @@ public class Solution {
             }
         }
 
+        //If no cycle is found, return false
             return false;
 
     }
