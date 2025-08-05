@@ -22,8 +22,10 @@ public class Solution {
             updated.Add(reverseStr[i]);
         }
 
+        string s1 = new string(reverseStr.ToArray());
+        string s2 = new string(updated.ToArray());
 
-        if((new string(reverseStr.ToArray())) == (new string(updated.ToArray())))
+        if(s1 == s2)
         {
             return true;
         } else{
