@@ -1,6 +1,8 @@
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
+
+        //It was almost the same and time efficient in c++, so i preferred c++ here
         // Approach is very simple
         // Variable to store the sum of two or more numbers
         int sum = 0;
