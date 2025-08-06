@@ -3,7 +3,7 @@ public class Solution {
         int sum = 0;
         int maxSum = 0;
         bool neg = false;
-        int max = -100000;
+        int max = -1000000;
 
         for(int i = 0 ; i < nums.Length ; i++)
         {
