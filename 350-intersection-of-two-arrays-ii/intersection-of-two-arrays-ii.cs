@@ -4,6 +4,8 @@ public class Solution {
         List<int> n2 = nums2.ToList();
         List<int> result = new List<int>();
 
+        //Similar Previous Logic but now we wont check the resultList for the element it exists, 
+        //We just add the element it it is presemt in both arrrays/List
         for(int i = 0 ; i < n1.Count ; i++)
         {
             if(n2.Contains(n1[i]))
