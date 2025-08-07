@@ -1,11 +1,13 @@
 public class Solution {
     public IList<IList<int>> Generate(int numRows) {
         var result = new List<IList<int>>();
-
+        //I used nested loops to make the List and for getting the
+        //Left child of prev list, i used this formula (i+j)%(i+1)
+        //for the right child of the prev list, i used (i+j)%i
         //using very different approach
         for(int i = 0 ; i < numRows ; i++)
         {
-            //it adds a new List
+            //it adds a new inner List inside the Whole single result list
             result.Add(new List<int>());
             for(int j = 0 ; j <= i ; j++ )
             {
@@ -20,6 +22,7 @@ public class Solution {
             }
         }
 
+        //Returning the Lsit
         return result;
         
     }
