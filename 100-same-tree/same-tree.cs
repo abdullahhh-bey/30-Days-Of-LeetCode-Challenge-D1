@@ -15,7 +15,8 @@ public class Solution {
     public bool IsSameTree(TreeNode p, TreeNode q) {
         //it firstr check the validation 
         //if both are null, return true
-        if( p == null &&   q == null )
+        //Base case
+        if( p == null && q == null )
         {
             return true;
         }
