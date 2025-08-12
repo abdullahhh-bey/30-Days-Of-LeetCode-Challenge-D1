@@ -15,6 +15,7 @@ public class Solution {
     public bool IsValidBST(TreeNode root) {
         bool Validate(TreeNode node, long minValue, long maxValue)
         {
+            //Using basic approach to check the node left and right child 
             if (node == null) 
                 return true; // Empty trees are valid
 
@@ -26,6 +27,6 @@ public class Solution {
         }
 
         return Validate(root, long.MinValue, long.MaxValue);
-        
+
     }
 }
